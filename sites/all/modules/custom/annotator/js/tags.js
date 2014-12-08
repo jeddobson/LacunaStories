@@ -18,7 +18,7 @@
         var tags;
         string = $.trim(string);
         tags = [];
-        if (string) tags = string.split(/\s+/);
+        if (string) tags = string.split(/,/);
         return tags;
       },
       stringifyTags: function(array) {
@@ -93,7 +93,7 @@
     matches = 0;
     keywords = [];
     if (input) {
-      keywords = input.split(/\s+/g);
+      keywords = input.split(/,/g);
       for (_i = 0, _len = keywords.length; _i < _len; _i++) {
         keyword = keywords[_i];
         if (tags.length) {
