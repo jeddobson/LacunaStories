@@ -10,22 +10,22 @@
 function lacuna_stories_permissions_user_default_roles() {
   $roles = array();
 
+  // Exported role: ARC Collaborator.
+  $roles['ARC Collaborator'] = array(
+    'name' => 'ARC Collaborator',
+    'weight' => 5,
+  );
+
+  // Exported role: ARC Member.
+  $roles['ARC Member'] = array(
+    'name' => 'ARC Member',
+    'weight' => 4,
+  );
+
   // Exported role: Content Manager.
   $roles['Content Manager'] = array(
     'name' => 'Content Manager',
     'weight' => 3,
-  );
-
-  // Exported role: Instructor.
-  $roles['Instructor'] = array(
-    'name' => 'Instructor',
-    'weight' => 4,
-  );
-
-  // Exported role: Student.
-  $roles['Student'] = array(
-    'name' => 'Student',
-    'weight' => 5,
   );
 
   // Exported role: administrator.

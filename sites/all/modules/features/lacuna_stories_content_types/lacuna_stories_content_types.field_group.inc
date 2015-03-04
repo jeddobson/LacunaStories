@@ -141,7 +141,7 @@ function lacuna_stories_content_types_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'About',
-    'weight' => '2',
+    'weight' => '3',
     'children' => array(
       0 => 'field_topics',
       1 => 'field_status',
@@ -387,11 +387,10 @@ function lacuna_stories_content_types_field_group_info() {
       2 => 'field_doc_genre',
       3 => 'field_doc_text',
       4 => 'field_image',
-      5 => 'field_artifact_projects',
-      6 => 'field_media_types',
-      7 => 'field_privacy_level',
-      8 => 'field_media',
-      9 => 'title',
+      5 => 'field_media_types',
+      6 => 'field_media',
+      7 => 'og_group_ref',
+      8 => 'title',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -482,7 +481,8 @@ function lacuna_stories_content_types_field_group_info() {
       2 => 'field_artifact_theme',
       3 => 'field_excess_mean_or_deficiency',
       4 => 'field_participation_level',
-      5 => 'group_force_power_politics',
+      5 => 'field_explanation',
+      6 => 'group_force_power_politics',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -507,7 +507,7 @@ function lacuna_stories_content_types_field_group_info() {
   $field_group->parent_name = 'group_diagnostics';
   $field_group->data = array(
     'label' => 'How Are Force, Politics, Power configured in your artifact?',
-    'weight' => '28',
+    'weight' => '29',
     'children' => array(
       0 => 'field_force',
       1 => 'field_power',

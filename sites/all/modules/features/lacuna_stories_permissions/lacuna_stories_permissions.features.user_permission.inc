@@ -51,8 +51,8 @@ function lacuna_stories_permissions_user_default_permissions() {
   $permissions['access any private annotation'] = array(
     'name' => 'access any private annotation',
     'roles' => array(
+      'ARC Member' => 'ARC Member',
       'Content Manager' => 'Content Manager',
-      'Instructor' => 'Instructor',
       'administrator' => 'administrator',
     ),
     'module' => 'annotation',
@@ -80,9 +80,9 @@ function lacuna_stories_permissions_user_default_permissions() {
   $permissions['access biblio content'] = array(
     'name' => 'access biblio content',
     'roles' => array(
+      'ARC Collaborator' => 'ARC Collaborator',
+      'ARC Member' => 'ARC Member',
       'Content Manager' => 'Content Manager',
-      'Instructor' => 'Instructor',
-      'Student' => 'Student',
       'administrator' => 'administrator',
       'anonymous user' => 'anonymous user',
       'authenticated user' => 'authenticated user',
@@ -94,9 +94,9 @@ function lacuna_stories_permissions_user_default_permissions() {
   $permissions['access comments'] = array(
     'name' => 'access comments',
     'roles' => array(
+      'ARC Collaborator' => 'ARC Collaborator',
+      'ARC Member' => 'ARC Member',
       'Content Manager' => 'Content Manager',
-      'Instructor' => 'Instructor',
-      'Student' => 'Student',
       'administrator' => 'administrator',
     ),
     'module' => 'comment',
@@ -146,9 +146,9 @@ function lacuna_stories_permissions_user_default_permissions() {
   $permissions['access notify'] = array(
     'name' => 'access notify',
     'roles' => array(
+      'ARC Collaborator' => 'ARC Collaborator',
+      'ARC Member' => 'ARC Member',
       'Content Manager' => 'Content Manager',
-      'Instructor' => 'Instructor',
-      'Student' => 'Student',
       'administrator' => 'administrator',
       'anonymous user' => 'anonymous user',
       'authenticated user' => 'authenticated user',
@@ -217,9 +217,9 @@ function lacuna_stories_permissions_user_default_permissions() {
   $permissions['access site-wide contact form'] = array(
     'name' => 'access site-wide contact form',
     'roles' => array(
+      'ARC Collaborator' => 'ARC Collaborator',
+      'ARC Member' => 'ARC Member',
       'Content Manager' => 'Content Manager',
-      'Instructor' => 'Instructor',
-      'Student' => 'Student',
       'administrator' => 'administrator',
     ),
     'module' => 'contact',
@@ -236,8 +236,8 @@ function lacuna_stories_permissions_user_default_permissions() {
   $permissions['access user contact forms'] = array(
     'name' => 'access user contact forms',
     'roles' => array(
+      'ARC Member' => 'ARC Member',
       'Content Manager' => 'Content Manager',
-      'Instructor' => 'Instructor',
       'administrator' => 'administrator',
     ),
     'module' => 'contact',
@@ -247,8 +247,8 @@ function lacuna_stories_permissions_user_default_permissions() {
   $permissions['access user profiles'] = array(
     'name' => 'access user profiles',
     'roles' => array(
+      'ARC Member' => 'ARC Member',
       'Content Manager' => 'Content Manager',
-      'Instructor' => 'Instructor',
       'administrator' => 'administrator',
     ),
     'module' => 'user',
@@ -268,9 +268,9 @@ function lacuna_stories_permissions_user_default_permissions() {
   $permissions['add media from remote sources'] = array(
     'name' => 'add media from remote sources',
     'roles' => array(
+      'ARC Collaborator' => 'ARC Collaborator',
+      'ARC Member' => 'ARC Member',
       'Content Manager' => 'Content Manager',
-      'Instructor' => 'Instructor',
-      'Student' => 'Student',
       'administrator' => 'administrator',
     ),
     'module' => 'media_internet',
@@ -609,7 +609,7 @@ function lacuna_stories_permissions_user_default_permissions() {
   $permissions['administer users'] = array(
     'name' => 'administer users',
     'roles' => array(
-      'Instructor' => 'Instructor',
+      'ARC Member' => 'ARC Member',
       'administrator' => 'administrator',
     ),
     'module' => 'user',
@@ -664,9 +664,9 @@ function lacuna_stories_permissions_user_default_permissions() {
   $permissions['cancel account'] = array(
     'name' => 'cancel account',
     'roles' => array(
+      'ARC Collaborator' => 'ARC Collaborator',
+      'ARC Member' => 'ARC Member',
       'Content Manager' => 'Content Manager',
-      'Instructor' => 'Instructor',
-      'Student' => 'Student',
       'administrator' => 'administrator',
     ),
     'module' => 'user',
@@ -676,9 +676,9 @@ function lacuna_stories_permissions_user_default_permissions() {
   $permissions['change own username'] = array(
     'name' => 'change own username',
     'roles' => array(
+      'ARC Collaborator' => 'ARC Collaborator',
+      'ARC Member' => 'ARC Member',
       'Content Manager' => 'Content Manager',
-      'Instructor' => 'Instructor',
-      'Student' => 'Student',
       'administrator' => 'administrator',
     ),
     'module' => 'user',
@@ -706,9 +706,9 @@ function lacuna_stories_permissions_user_default_permissions() {
   $permissions['create annotation content'] = array(
     'name' => 'create annotation content',
     'roles' => array(
+      'ARC Collaborator' => 'ARC Collaborator',
+      'ARC Member' => 'ARC Member',
       'Content Manager' => 'Content Manager',
-      'Instructor' => 'Instructor',
-      'Student' => 'Student',
       'administrator' => 'administrator',
     ),
     'module' => 'node',
@@ -718,9 +718,9 @@ function lacuna_stories_permissions_user_default_permissions() {
   $permissions['create annotations'] = array(
     'name' => 'create annotations',
     'roles' => array(
+      'ARC Collaborator' => 'ARC Collaborator',
+      'ARC Member' => 'ARC Member',
       'Content Manager' => 'Content Manager',
-      'Instructor' => 'Instructor',
-      'Student' => 'Student',
       'administrator' => 'administrator',
     ),
     'module' => 'annotator',
@@ -740,9 +740,9 @@ function lacuna_stories_permissions_user_default_permissions() {
   $permissions['create biblio content'] = array(
     'name' => 'create biblio content',
     'roles' => array(
+      'ARC Collaborator' => 'ARC Collaborator',
+      'ARC Member' => 'ARC Member',
       'Content Manager' => 'Content Manager',
-      'Instructor' => 'Instructor',
-      'Student' => 'Student',
       'administrator' => 'administrator',
     ),
     'module' => 'node',
@@ -752,9 +752,9 @@ function lacuna_stories_permissions_user_default_permissions() {
   $permissions['create blog content'] = array(
     'name' => 'create blog content',
     'roles' => array(
+      'ARC Collaborator' => 'ARC Collaborator',
+      'ARC Member' => 'ARC Member',
       'Content Manager' => 'Content Manager',
-      'Instructor' => 'Instructor',
-      'Student' => 'Student',
       'administrator' => 'administrator',
     ),
     'module' => 'node',
@@ -764,8 +764,8 @@ function lacuna_stories_permissions_user_default_permissions() {
   $permissions['create course_or_other_group content'] = array(
     'name' => 'create course_or_other_group content',
     'roles' => array(
+      'ARC Member' => 'ARC Member',
       'Content Manager' => 'Content Manager',
-      'Instructor' => 'Instructor',
       'administrator' => 'administrator',
     ),
     'module' => 'node',
@@ -775,8 +775,8 @@ function lacuna_stories_permissions_user_default_permissions() {
   $permissions['create document content'] = array(
     'name' => 'create document content',
     'roles' => array(
+      'ARC Member' => 'ARC Member',
       'Content Manager' => 'Content Manager',
-      'Instructor' => 'Instructor',
       'administrator' => 'administrator',
     ),
     'module' => 'node',
@@ -786,9 +786,9 @@ function lacuna_stories_permissions_user_default_permissions() {
   $permissions['create field_date_of_birth'] = array(
     'name' => 'create field_date_of_birth',
     'roles' => array(
+      'ARC Collaborator' => 'ARC Collaborator',
+      'ARC Member' => 'ARC Member',
       'Content Manager' => 'Content Manager',
-      'Instructor' => 'Instructor',
-      'Student' => 'Student',
       'administrator' => 'administrator',
       'anonymous user' => 'anonymous user',
     ),
@@ -799,9 +799,9 @@ function lacuna_stories_permissions_user_default_permissions() {
   $permissions['create field_education'] = array(
     'name' => 'create field_education',
     'roles' => array(
+      'ARC Collaborator' => 'ARC Collaborator',
+      'ARC Member' => 'ARC Member',
       'Content Manager' => 'Content Manager',
-      'Instructor' => 'Instructor',
-      'Student' => 'Student',
       'administrator' => 'administrator',
       'anonymous user' => 'anonymous user',
     ),
@@ -812,12 +812,19 @@ function lacuna_stories_permissions_user_default_permissions() {
   $permissions['create field_gender'] = array(
     'name' => 'create field_gender',
     'roles' => array(
+      'ARC Collaborator' => 'ARC Collaborator',
+      'ARC Member' => 'ARC Member',
       'Content Manager' => 'Content Manager',
-      'Instructor' => 'Instructor',
-      'Student' => 'Student',
       'administrator' => 'administrator',
       'anonymous user' => 'anonymous user',
     ),
+    'module' => 'field_permissions',
+  );
+
+  // Exported permission: 'create field_how_i_learn'.
+  $permissions['create field_how_i_learn'] = array(
+    'name' => 'create field_how_i_learn',
+    'roles' => array(),
     'module' => 'field_permissions',
   );
 
@@ -825,9 +832,9 @@ function lacuna_stories_permissions_user_default_permissions() {
   $permissions['create field_major_degree'] = array(
     'name' => 'create field_major_degree',
     'roles' => array(
+      'ARC Collaborator' => 'ARC Collaborator',
+      'ARC Member' => 'ARC Member',
       'Content Manager' => 'Content Manager',
-      'Instructor' => 'Instructor',
-      'Student' => 'Student',
       'administrator' => 'administrator',
       'anonymous user' => 'anonymous user',
     ),
@@ -838,8 +845,8 @@ function lacuna_stories_permissions_user_default_permissions() {
   $permissions['create field_status'] = array(
     'name' => 'create field_status',
     'roles' => array(
+      'ARC Member' => 'ARC Member',
       'Content Manager' => 'Content Manager',
-      'Instructor' => 'Instructor',
       'administrator' => 'administrator',
     ),
     'module' => 'field_permissions',
@@ -849,9 +856,9 @@ function lacuna_stories_permissions_user_default_permissions() {
   $permissions['create field_year_in_program'] = array(
     'name' => 'create field_year_in_program',
     'roles' => array(
+      'ARC Collaborator' => 'ARC Collaborator',
+      'ARC Member' => 'ARC Member',
       'Content Manager' => 'Content Manager',
-      'Instructor' => 'Instructor',
-      'Student' => 'Student',
       'administrator' => 'administrator',
       'anonymous user' => 'anonymous user',
     ),
@@ -862,9 +869,9 @@ function lacuna_stories_permissions_user_default_permissions() {
   $permissions['create og_user_node'] = array(
     'name' => 'create og_user_node',
     'roles' => array(
+      'ARC Collaborator' => 'ARC Collaborator',
+      'ARC Member' => 'ARC Member',
       'Content Manager' => 'Content Manager',
-      'Instructor' => 'Instructor',
-      'Student' => 'Student',
       'administrator' => 'administrator',
       'anonymous user' => 'anonymous user',
     ),
@@ -885,9 +892,9 @@ function lacuna_stories_permissions_user_default_permissions() {
   $permissions['create thread content'] = array(
     'name' => 'create thread content',
     'roles' => array(
+      'ARC Collaborator' => 'ARC Collaborator',
+      'ARC Member' => 'ARC Member',
       'Content Manager' => 'Content Manager',
-      'Instructor' => 'Instructor',
-      'Student' => 'Student',
       'administrator' => 'administrator',
     ),
     'module' => 'node',
@@ -906,9 +913,9 @@ function lacuna_stories_permissions_user_default_permissions() {
   $permissions['create webform content'] = array(
     'name' => 'create webform content',
     'roles' => array(
+      'ARC Collaborator' => 'ARC Collaborator',
+      'ARC Member' => 'ARC Member',
       'Content Manager' => 'Content Manager',
-      'Instructor' => 'Instructor',
-      'Student' => 'Student',
       'administrator' => 'administrator',
     ),
     'module' => 'node',
@@ -1035,9 +1042,9 @@ function lacuna_stories_permissions_user_default_permissions() {
   $permissions['delete own annotation content'] = array(
     'name' => 'delete own annotation content',
     'roles' => array(
+      'ARC Collaborator' => 'ARC Collaborator',
+      'ARC Member' => 'ARC Member',
       'Content Manager' => 'Content Manager',
-      'Instructor' => 'Instructor',
-      'Student' => 'Student',
       'administrator' => 'administrator',
     ),
     'module' => 'node',
@@ -1057,9 +1064,9 @@ function lacuna_stories_permissions_user_default_permissions() {
   $permissions['delete own biblio content'] = array(
     'name' => 'delete own biblio content',
     'roles' => array(
+      'ARC Collaborator' => 'ARC Collaborator',
+      'ARC Member' => 'ARC Member',
       'Content Manager' => 'Content Manager',
-      'Instructor' => 'Instructor',
-      'Student' => 'Student',
       'administrator' => 'administrator',
     ),
     'module' => 'node',
@@ -1069,9 +1076,9 @@ function lacuna_stories_permissions_user_default_permissions() {
   $permissions['delete own blog content'] = array(
     'name' => 'delete own blog content',
     'roles' => array(
+      'ARC Collaborator' => 'ARC Collaborator',
+      'ARC Member' => 'ARC Member',
       'Content Manager' => 'Content Manager',
-      'Instructor' => 'Instructor',
-      'Student' => 'Student',
       'administrator' => 'administrator',
     ),
     'module' => 'node',
@@ -1081,8 +1088,8 @@ function lacuna_stories_permissions_user_default_permissions() {
   $permissions['delete own course_or_other_group content'] = array(
     'name' => 'delete own course_or_other_group content',
     'roles' => array(
+      'ARC Member' => 'ARC Member',
       'Content Manager' => 'Content Manager',
-      'Instructor' => 'Instructor',
       'administrator' => 'administrator',
     ),
     'module' => 'node',
@@ -1092,8 +1099,8 @@ function lacuna_stories_permissions_user_default_permissions() {
   $permissions['delete own document content'] = array(
     'name' => 'delete own document content',
     'roles' => array(
+      'ARC Member' => 'ARC Member',
       'Content Manager' => 'Content Manager',
-      'Instructor' => 'Instructor',
       'administrator' => 'administrator',
     ),
     'module' => 'node',
@@ -1113,9 +1120,9 @@ function lacuna_stories_permissions_user_default_permissions() {
   $permissions['delete own thread content'] = array(
     'name' => 'delete own thread content',
     'roles' => array(
+      'ARC Collaborator' => 'ARC Collaborator',
+      'ARC Member' => 'ARC Member',
       'Content Manager' => 'Content Manager',
-      'Instructor' => 'Instructor',
-      'Student' => 'Student',
       'administrator' => 'administrator',
     ),
     'module' => 'node',
@@ -1125,9 +1132,9 @@ function lacuna_stories_permissions_user_default_permissions() {
   $permissions['delete own webform content'] = array(
     'name' => 'delete own webform content',
     'roles' => array(
+      'ARC Collaborator' => 'ARC Collaborator',
+      'ARC Member' => 'ARC Member',
       'Content Manager' => 'Content Manager',
-      'Instructor' => 'Instructor',
-      'Student' => 'Student',
       'administrator' => 'administrator',
     ),
     'module' => 'node',
@@ -1163,6 +1170,55 @@ function lacuna_stories_permissions_user_default_permissions() {
     'module' => 'taxonomy',
   );
 
+  // Exported permission: 'delete terms in artifact_force_politics_power'.
+  $permissions['delete terms in artifact_force_politics_power'] = array(
+    'name' => 'delete terms in artifact_force_politics_power',
+    'roles' => array(),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: 'delete terms in artifact_intercession'.
+  $permissions['delete terms in artifact_intercession'] = array(
+    'name' => 'delete terms in artifact_intercession',
+    'roles' => array(),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: 'delete terms in artifact_mode'.
+  $permissions['delete terms in artifact_mode'] = array(
+    'name' => 'delete terms in artifact_mode',
+    'roles' => array(),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: 'delete terms in artifact_participation_level'.
+  $permissions['delete terms in artifact_participation_level'] = array(
+    'name' => 'delete terms in artifact_participation_level',
+    'roles' => array(),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: 'delete terms in artifact_privacy_levels'.
+  $permissions['delete terms in artifact_privacy_levels'] = array(
+    'name' => 'delete terms in artifact_privacy_levels',
+    'roles' => array(),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: 'delete terms in artifact_projects'.
+  $permissions['delete terms in artifact_projects'] = array(
+    'name' => 'delete terms in artifact_projects',
+    'roles' => array(),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: 'delete terms in artifact_theme'.
+  $permissions['delete terms in artifact_theme'] = array(
+    'name' => 'delete terms in artifact_theme',
+    'roles' => array(),
+    'module' => 'taxonomy',
+  );
+
   // Exported permission: 'delete terms in genre_doc'.
   $permissions['delete terms in genre_doc'] = array(
     'name' => 'delete terms in genre_doc',
@@ -1180,13 +1236,10 @@ function lacuna_stories_permissions_user_default_permissions() {
     'module' => 'taxonomy',
   );
 
-  // Exported permission: 'delete terms in priority'.
-  $permissions['delete terms in priority'] = array(
-    'name' => 'delete terms in priority',
-    'roles' => array(
-      'Content Manager' => 'Content Manager',
-      'administrator' => 'administrator',
-    ),
+  // Exported permission: 'delete terms in media_types'.
+  $permissions['delete terms in media_types'] = array(
+    'name' => 'delete terms in media_types',
+    'roles' => array(),
     'module' => 'taxonomy',
   );
 
@@ -1203,16 +1256,6 @@ function lacuna_stories_permissions_user_default_permissions() {
   // Exported permission: 'delete terms in topics'.
   $permissions['delete terms in topics'] = array(
     'name' => 'delete terms in topics',
-    'roles' => array(
-      'Content Manager' => 'Content Manager',
-      'administrator' => 'administrator',
-    ),
-    'module' => 'taxonomy',
-  );
-
-  // Exported permission: 'delete terms in unit'.
-  $permissions['delete terms in unit'] = array(
-    'name' => 'delete terms in unit',
     'roles' => array(
       'Content Manager' => 'Content Manager',
       'administrator' => 'administrator',
@@ -1351,8 +1394,8 @@ function lacuna_stories_permissions_user_default_permissions() {
   $permissions['edit biblio authors'] = array(
     'name' => 'edit biblio authors',
     'roles' => array(
+      'ARC Member' => 'ARC Member',
       'Content Manager' => 'Content Manager',
-      'Instructor' => 'Instructor',
       'administrator' => 'administrator',
     ),
     'module' => 'biblio',
@@ -1362,8 +1405,8 @@ function lacuna_stories_permissions_user_default_permissions() {
   $permissions['edit by all biblio authors'] = array(
     'name' => 'edit by all biblio authors',
     'roles' => array(
+      'ARC Member' => 'ARC Member',
       'Content Manager' => 'Content Manager',
-      'Instructor' => 'Instructor',
       'administrator' => 'administrator',
     ),
     'module' => 'biblio',
@@ -1393,6 +1436,13 @@ function lacuna_stories_permissions_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
     ),
+    'module' => 'field_permissions',
+  );
+
+  // Exported permission: 'edit field_how_i_learn'.
+  $permissions['edit field_how_i_learn'] = array(
+    'name' => 'edit field_how_i_learn',
+    'roles' => array(),
     'module' => 'field_permissions',
   );
 
@@ -1428,8 +1478,8 @@ function lacuna_stories_permissions_user_default_permissions() {
   $permissions['edit media'] = array(
     'name' => 'edit media',
     'roles' => array(
+      'ARC Member' => 'ARC Member',
       'Content Manager' => 'Content Manager',
-      'Instructor' => 'Instructor',
       'administrator' => 'administrator',
     ),
     'module' => 'media',
@@ -1448,9 +1498,9 @@ function lacuna_stories_permissions_user_default_permissions() {
   $permissions['edit own annotation content'] = array(
     'name' => 'edit own annotation content',
     'roles' => array(
+      'ARC Collaborator' => 'ARC Collaborator',
+      'ARC Member' => 'ARC Member',
       'Content Manager' => 'Content Manager',
-      'Instructor' => 'Instructor',
-      'Student' => 'Student',
       'administrator' => 'administrator',
     ),
     'module' => 'node',
@@ -1460,9 +1510,9 @@ function lacuna_stories_permissions_user_default_permissions() {
   $permissions['edit own annotations'] = array(
     'name' => 'edit own annotations',
     'roles' => array(
+      'ARC Collaborator' => 'ARC Collaborator',
+      'ARC Member' => 'ARC Member',
       'Content Manager' => 'Content Manager',
-      'Instructor' => 'Instructor',
-      'Student' => 'Student',
       'administrator' => 'administrator',
     ),
     'module' => 'annotator',
@@ -1482,9 +1532,9 @@ function lacuna_stories_permissions_user_default_permissions() {
   $permissions['edit own biblio content'] = array(
     'name' => 'edit own biblio content',
     'roles' => array(
+      'ARC Collaborator' => 'ARC Collaborator',
+      'ARC Member' => 'ARC Member',
       'Content Manager' => 'Content Manager',
-      'Instructor' => 'Instructor',
-      'Student' => 'Student',
       'administrator' => 'administrator',
     ),
     'module' => 'node',
@@ -1494,9 +1544,9 @@ function lacuna_stories_permissions_user_default_permissions() {
   $permissions['edit own blog content'] = array(
     'name' => 'edit own blog content',
     'roles' => array(
+      'ARC Collaborator' => 'ARC Collaborator',
+      'ARC Member' => 'ARC Member',
       'Content Manager' => 'Content Manager',
-      'Instructor' => 'Instructor',
-      'Student' => 'Student',
       'administrator' => 'administrator',
     ),
     'module' => 'node',
@@ -1506,9 +1556,9 @@ function lacuna_stories_permissions_user_default_permissions() {
   $permissions['edit own comments'] = array(
     'name' => 'edit own comments',
     'roles' => array(
+      'ARC Collaborator' => 'ARC Collaborator',
+      'ARC Member' => 'ARC Member',
       'Content Manager' => 'Content Manager',
-      'Instructor' => 'Instructor',
-      'Student' => 'Student',
       'administrator' => 'administrator',
     ),
     'module' => 'comment',
@@ -1518,8 +1568,8 @@ function lacuna_stories_permissions_user_default_permissions() {
   $permissions['edit own course_or_other_group content'] = array(
     'name' => 'edit own course_or_other_group content',
     'roles' => array(
+      'ARC Member' => 'ARC Member',
       'Content Manager' => 'Content Manager',
-      'Instructor' => 'Instructor',
       'administrator' => 'administrator',
     ),
     'module' => 'node',
@@ -1529,8 +1579,8 @@ function lacuna_stories_permissions_user_default_permissions() {
   $permissions['edit own document content'] = array(
     'name' => 'edit own document content',
     'roles' => array(
+      'ARC Member' => 'ARC Member',
       'Content Manager' => 'Content Manager',
-      'Instructor' => 'Instructor',
       'administrator' => 'administrator',
     ),
     'module' => 'node',
@@ -1540,9 +1590,9 @@ function lacuna_stories_permissions_user_default_permissions() {
   $permissions['edit own field_date_of_birth'] = array(
     'name' => 'edit own field_date_of_birth',
     'roles' => array(
+      'ARC Collaborator' => 'ARC Collaborator',
+      'ARC Member' => 'ARC Member',
       'Content Manager' => 'Content Manager',
-      'Instructor' => 'Instructor',
-      'Student' => 'Student',
       'administrator' => 'administrator',
     ),
     'module' => 'field_permissions',
@@ -1552,9 +1602,9 @@ function lacuna_stories_permissions_user_default_permissions() {
   $permissions['edit own field_education'] = array(
     'name' => 'edit own field_education',
     'roles' => array(
+      'ARC Collaborator' => 'ARC Collaborator',
+      'ARC Member' => 'ARC Member',
       'Content Manager' => 'Content Manager',
-      'Instructor' => 'Instructor',
-      'Student' => 'Student',
       'administrator' => 'administrator',
     ),
     'module' => 'field_permissions',
@@ -1564,11 +1614,18 @@ function lacuna_stories_permissions_user_default_permissions() {
   $permissions['edit own field_gender'] = array(
     'name' => 'edit own field_gender',
     'roles' => array(
+      'ARC Collaborator' => 'ARC Collaborator',
+      'ARC Member' => 'ARC Member',
       'Content Manager' => 'Content Manager',
-      'Instructor' => 'Instructor',
-      'Student' => 'Student',
       'administrator' => 'administrator',
     ),
+    'module' => 'field_permissions',
+  );
+
+  // Exported permission: 'edit own field_how_i_learn'.
+  $permissions['edit own field_how_i_learn'] = array(
+    'name' => 'edit own field_how_i_learn',
+    'roles' => array(),
     'module' => 'field_permissions',
   );
 
@@ -1576,9 +1633,9 @@ function lacuna_stories_permissions_user_default_permissions() {
   $permissions['edit own field_major_degree'] = array(
     'name' => 'edit own field_major_degree',
     'roles' => array(
+      'ARC Collaborator' => 'ARC Collaborator',
+      'ARC Member' => 'ARC Member',
       'Content Manager' => 'Content Manager',
-      'Instructor' => 'Instructor',
-      'Student' => 'Student',
       'administrator' => 'administrator',
     ),
     'module' => 'field_permissions',
@@ -1588,8 +1645,8 @@ function lacuna_stories_permissions_user_default_permissions() {
   $permissions['edit own field_status'] = array(
     'name' => 'edit own field_status',
     'roles' => array(
+      'ARC Member' => 'ARC Member',
       'Content Manager' => 'Content Manager',
-      'Instructor' => 'Instructor',
       'administrator' => 'administrator',
     ),
     'module' => 'field_permissions',
@@ -1599,9 +1656,9 @@ function lacuna_stories_permissions_user_default_permissions() {
   $permissions['edit own field_year_in_program'] = array(
     'name' => 'edit own field_year_in_program',
     'roles' => array(
+      'ARC Collaborator' => 'ARC Collaborator',
+      'ARC Member' => 'ARC Member',
       'Content Manager' => 'Content Manager',
-      'Instructor' => 'Instructor',
-      'Student' => 'Student',
       'administrator' => 'administrator',
     ),
     'module' => 'field_permissions',
@@ -1611,9 +1668,9 @@ function lacuna_stories_permissions_user_default_permissions() {
   $permissions['edit own og_user_node'] = array(
     'name' => 'edit own og_user_node',
     'roles' => array(
+      'ARC Collaborator' => 'ARC Collaborator',
+      'ARC Member' => 'ARC Member',
       'Content Manager' => 'Content Manager',
-      'Instructor' => 'Instructor',
-      'Student' => 'Student',
       'administrator' => 'administrator',
     ),
     'module' => 'field_permissions',
@@ -1633,9 +1690,9 @@ function lacuna_stories_permissions_user_default_permissions() {
   $permissions['edit own thread content'] = array(
     'name' => 'edit own thread content',
     'roles' => array(
+      'ARC Collaborator' => 'ARC Collaborator',
+      'ARC Member' => 'ARC Member',
       'Content Manager' => 'Content Manager',
-      'Instructor' => 'Instructor',
-      'Student' => 'Student',
       'administrator' => 'administrator',
     ),
     'module' => 'node',
@@ -1645,9 +1702,9 @@ function lacuna_stories_permissions_user_default_permissions() {
   $permissions['edit own webform content'] = array(
     'name' => 'edit own webform content',
     'roles' => array(
+      'ARC Collaborator' => 'ARC Collaborator',
+      'ARC Member' => 'ARC Member',
       'Content Manager' => 'Content Manager',
-      'Instructor' => 'Instructor',
-      'Student' => 'Student',
       'administrator' => 'administrator',
     ),
     'module' => 'node',
@@ -1673,6 +1730,55 @@ function lacuna_stories_permissions_user_default_permissions() {
     'module' => 'taxonomy',
   );
 
+  // Exported permission: 'edit terms in artifact_force_politics_power'.
+  $permissions['edit terms in artifact_force_politics_power'] = array(
+    'name' => 'edit terms in artifact_force_politics_power',
+    'roles' => array(),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: 'edit terms in artifact_intercession'.
+  $permissions['edit terms in artifact_intercession'] = array(
+    'name' => 'edit terms in artifact_intercession',
+    'roles' => array(),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: 'edit terms in artifact_mode'.
+  $permissions['edit terms in artifact_mode'] = array(
+    'name' => 'edit terms in artifact_mode',
+    'roles' => array(),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: 'edit terms in artifact_participation_level'.
+  $permissions['edit terms in artifact_participation_level'] = array(
+    'name' => 'edit terms in artifact_participation_level',
+    'roles' => array(),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: 'edit terms in artifact_privacy_levels'.
+  $permissions['edit terms in artifact_privacy_levels'] = array(
+    'name' => 'edit terms in artifact_privacy_levels',
+    'roles' => array(),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: 'edit terms in artifact_projects'.
+  $permissions['edit terms in artifact_projects'] = array(
+    'name' => 'edit terms in artifact_projects',
+    'roles' => array(),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: 'edit terms in artifact_theme'.
+  $permissions['edit terms in artifact_theme'] = array(
+    'name' => 'edit terms in artifact_theme',
+    'roles' => array(),
+    'module' => 'taxonomy',
+  );
+
   // Exported permission: 'edit terms in genre_doc'.
   $permissions['edit terms in genre_doc'] = array(
     'name' => 'edit terms in genre_doc',
@@ -1690,13 +1796,10 @@ function lacuna_stories_permissions_user_default_permissions() {
     'module' => 'taxonomy',
   );
 
-  // Exported permission: 'edit terms in priority'.
-  $permissions['edit terms in priority'] = array(
-    'name' => 'edit terms in priority',
-    'roles' => array(
-      'Content Manager' => 'Content Manager',
-      'administrator' => 'administrator',
-    ),
+  // Exported permission: 'edit terms in media_types'.
+  $permissions['edit terms in media_types'] = array(
+    'name' => 'edit terms in media_types',
+    'roles' => array(),
     'module' => 'taxonomy',
   );
 
@@ -1704,9 +1807,9 @@ function lacuna_stories_permissions_user_default_permissions() {
   $permissions['edit terms in tags'] = array(
     'name' => 'edit terms in tags',
     'roles' => array(
+      'ARC Collaborator' => 'ARC Collaborator',
+      'ARC Member' => 'ARC Member',
       'Content Manager' => 'Content Manager',
-      'Instructor' => 'Instructor',
-      'Student' => 'Student',
       'administrator' => 'administrator',
     ),
     'module' => 'taxonomy',
@@ -1716,17 +1819,7 @@ function lacuna_stories_permissions_user_default_permissions() {
   $permissions['edit terms in topics'] = array(
     'name' => 'edit terms in topics',
     'roles' => array(
-      'Content Manager' => 'Content Manager',
-      'Instructor' => 'Instructor',
-      'administrator' => 'administrator',
-    ),
-    'module' => 'taxonomy',
-  );
-
-  // Exported permission: 'edit terms in unit'.
-  $permissions['edit terms in unit'] = array(
-    'name' => 'edit terms in unit',
-    'roles' => array(
+      'ARC Member' => 'ARC Member',
       'Content Manager' => 'Content Manager',
       'administrator' => 'administrator',
     ),
@@ -1737,8 +1830,8 @@ function lacuna_stories_permissions_user_default_permissions() {
   $permissions['edit workflow comment'] = array(
     'name' => 'edit workflow comment',
     'roles' => array(
+      'ARC Member' => 'ARC Member',
       'Content Manager' => 'Content Manager',
-      'Instructor' => 'Instructor',
       'administrator' => 'administrator',
     ),
     'module' => 'workflow',
@@ -1790,8 +1883,8 @@ function lacuna_stories_permissions_user_default_permissions() {
   $permissions['import from file'] = array(
     'name' => 'import from file',
     'roles' => array(
+      'ARC Member' => 'ARC Member',
       'Content Manager' => 'Content Manager',
-      'Instructor' => 'Instructor',
       'administrator' => 'administrator',
     ),
     'module' => 'biblio',
@@ -1829,9 +1922,9 @@ function lacuna_stories_permissions_user_default_permissions() {
   $permissions['participate in workflow'] = array(
     'name' => 'participate in workflow',
     'roles' => array(
+      'ARC Collaborator' => 'ARC Collaborator',
+      'ARC Member' => 'ARC Member',
       'Content Manager' => 'Content Manager',
-      'Instructor' => 'Instructor',
-      'Student' => 'Student',
       'administrator' => 'administrator',
     ),
     'module' => 'workflow',
@@ -1850,9 +1943,9 @@ function lacuna_stories_permissions_user_default_permissions() {
   $permissions['post comments'] = array(
     'name' => 'post comments',
     'roles' => array(
+      'ARC Collaborator' => 'ARC Collaborator',
+      'ARC Member' => 'ARC Member',
       'Content Manager' => 'Content Manager',
-      'Instructor' => 'Instructor',
-      'Student' => 'Student',
       'administrator' => 'administrator',
     ),
     'module' => 'comment',
@@ -1872,9 +1965,9 @@ function lacuna_stories_permissions_user_default_permissions() {
   $permissions['publish editable content'] = array(
     'name' => 'publish editable content',
     'roles' => array(
+      'ARC Collaborator' => 'ARC Collaborator',
+      'ARC Member' => 'ARC Member',
       'Content Manager' => 'Content Manager',
-      'Instructor' => 'Instructor',
-      'Student' => 'Student',
       'administrator' => 'administrator',
     ),
     'module' => 'publishcontent',
@@ -1931,9 +2024,9 @@ function lacuna_stories_permissions_user_default_permissions() {
   $permissions['select account cancellation method'] = array(
     'name' => 'select account cancellation method',
     'roles' => array(
+      'ARC Collaborator' => 'ARC Collaborator',
+      'ARC Member' => 'ARC Member',
       'Content Manager' => 'Content Manager',
-      'Instructor' => 'Instructor',
-      'Student' => 'Student',
       'administrator' => 'administrator',
     ),
     'module' => 'user',
@@ -1952,9 +2045,9 @@ function lacuna_stories_permissions_user_default_permissions() {
   $permissions['show export links'] = array(
     'name' => 'show export links',
     'roles' => array(
+      'ARC Collaborator' => 'ARC Collaborator',
+      'ARC Member' => 'ARC Member',
       'Content Manager' => 'Content Manager',
-      'Instructor' => 'Instructor',
-      'Student' => 'Student',
       'administrator' => 'administrator',
     ),
     'module' => 'biblio',
@@ -1964,9 +2057,9 @@ function lacuna_stories_permissions_user_default_permissions() {
   $permissions['show filter tab'] = array(
     'name' => 'show filter tab',
     'roles' => array(
+      'ARC Collaborator' => 'ARC Collaborator',
+      'ARC Member' => 'ARC Member',
       'Content Manager' => 'Content Manager',
-      'Instructor' => 'Instructor',
-      'Student' => 'Student',
       'administrator' => 'administrator',
     ),
     'module' => 'biblio',
@@ -1985,9 +2078,9 @@ function lacuna_stories_permissions_user_default_permissions() {
   $permissions['show sort links'] = array(
     'name' => 'show sort links',
     'roles' => array(
+      'ARC Collaborator' => 'ARC Collaborator',
+      'ARC Member' => 'ARC Member',
       'Content Manager' => 'Content Manager',
-      'Instructor' => 'Instructor',
-      'Student' => 'Student',
       'administrator' => 'administrator',
     ),
     'module' => 'biblio',
@@ -1997,8 +2090,8 @@ function lacuna_stories_permissions_user_default_permissions() {
   $permissions['show workflow state form'] = array(
     'name' => 'show workflow state form',
     'roles' => array(
+      'ARC Member' => 'ARC Member',
       'Content Manager' => 'Content Manager',
-      'Instructor' => 'Instructor',
       'administrator' => 'administrator',
     ),
     'module' => 'workflow',
@@ -2008,9 +2101,9 @@ function lacuna_stories_permissions_user_default_permissions() {
   $permissions['skip comment approval'] = array(
     'name' => 'skip comment approval',
     'roles' => array(
+      'ARC Collaborator' => 'ARC Collaborator',
+      'ARC Member' => 'ARC Member',
       'Content Manager' => 'Content Manager',
-      'Instructor' => 'Instructor',
-      'Student' => 'Student',
       'administrator' => 'administrator',
     ),
     'module' => 'comment',
@@ -2048,9 +2141,9 @@ function lacuna_stories_permissions_user_default_permissions() {
   $permissions['unpublish editable content'] = array(
     'name' => 'unpublish editable content',
     'roles' => array(
+      'ARC Collaborator' => 'ARC Collaborator',
+      'ARC Member' => 'ARC Member',
       'Content Manager' => 'Content Manager',
-      'Instructor' => 'Instructor',
-      'Student' => 'Student',
       'administrator' => 'administrator',
     ),
     'module' => 'publishcontent',
@@ -2087,9 +2180,9 @@ function lacuna_stories_permissions_user_default_permissions() {
   $permissions['use text format full_html'] = array(
     'name' => 'use text format full_html',
     'roles' => array(
+      'ARC Collaborator' => 'ARC Collaborator',
+      'ARC Member' => 'ARC Member',
       'Content Manager' => 'Content Manager',
-      'Instructor' => 'Instructor',
-      'Student' => 'Student',
       'administrator' => 'administrator',
     ),
     'module' => 'filter',
@@ -2135,9 +2228,9 @@ function lacuna_stories_permissions_user_default_permissions() {
   $permissions['view annotations'] = array(
     'name' => 'view annotations',
     'roles' => array(
+      'ARC Collaborator' => 'ARC Collaborator',
+      'ARC Member' => 'ARC Member',
       'Content Manager' => 'Content Manager',
-      'Instructor' => 'Instructor',
-      'Student' => 'Student',
       'administrator' => 'administrator',
     ),
     'module' => 'annotator',
@@ -2147,7 +2240,7 @@ function lacuna_stories_permissions_user_default_permissions() {
   $permissions['view field_date_of_birth'] = array(
     'name' => 'view field_date_of_birth',
     'roles' => array(
-      'Instructor' => 'Instructor',
+      'ARC Member' => 'ARC Member',
       'administrator' => 'administrator',
     ),
     'module' => 'field_permissions',
@@ -2157,7 +2250,7 @@ function lacuna_stories_permissions_user_default_permissions() {
   $permissions['view field_education'] = array(
     'name' => 'view field_education',
     'roles' => array(
-      'Instructor' => 'Instructor',
+      'ARC Member' => 'ARC Member',
       'administrator' => 'administrator',
     ),
     'module' => 'field_permissions',
@@ -2167,9 +2260,16 @@ function lacuna_stories_permissions_user_default_permissions() {
   $permissions['view field_gender'] = array(
     'name' => 'view field_gender',
     'roles' => array(
-      'Instructor' => 'Instructor',
+      'ARC Member' => 'ARC Member',
       'administrator' => 'administrator',
     ),
+    'module' => 'field_permissions',
+  );
+
+  // Exported permission: 'view field_how_i_learn'.
+  $permissions['view field_how_i_learn'] = array(
+    'name' => 'view field_how_i_learn',
+    'roles' => array(),
     'module' => 'field_permissions',
   );
 
@@ -2177,7 +2277,7 @@ function lacuna_stories_permissions_user_default_permissions() {
   $permissions['view field_major_degree'] = array(
     'name' => 'view field_major_degree',
     'roles' => array(
-      'Instructor' => 'Instructor',
+      'ARC Member' => 'ARC Member',
       'administrator' => 'administrator',
     ),
     'module' => 'field_permissions',
@@ -2197,7 +2297,7 @@ function lacuna_stories_permissions_user_default_permissions() {
   $permissions['view field_year_in_program'] = array(
     'name' => 'view field_year_in_program',
     'roles' => array(
-      'Instructor' => 'Instructor',
+      'ARC Member' => 'ARC Member',
       'administrator' => 'administrator',
     ),
     'module' => 'field_permissions',
@@ -2216,9 +2316,9 @@ function lacuna_stories_permissions_user_default_permissions() {
   $permissions['view media'] = array(
     'name' => 'view media',
     'roles' => array(
+      'ARC Collaborator' => 'ARC Collaborator',
+      'ARC Member' => 'ARC Member',
       'Content Manager' => 'Content Manager',
-      'Instructor' => 'Instructor',
-      'Student' => 'Student',
       'administrator' => 'administrator',
       'authenticated user' => 'authenticated user',
     ),
@@ -2229,7 +2329,7 @@ function lacuna_stories_permissions_user_default_permissions() {
   $permissions['view og_user_node'] = array(
     'name' => 'view og_user_node',
     'roles' => array(
-      'Instructor' => 'Instructor',
+      'ARC Member' => 'ARC Member',
       'administrator' => 'administrator',
     ),
     'module' => 'field_permissions',
@@ -2239,9 +2339,9 @@ function lacuna_stories_permissions_user_default_permissions() {
   $permissions['view own field_date_of_birth'] = array(
     'name' => 'view own field_date_of_birth',
     'roles' => array(
+      'ARC Collaborator' => 'ARC Collaborator',
+      'ARC Member' => 'ARC Member',
       'Content Manager' => 'Content Manager',
-      'Instructor' => 'Instructor',
-      'Student' => 'Student',
       'administrator' => 'administrator',
     ),
     'module' => 'field_permissions',
@@ -2251,9 +2351,9 @@ function lacuna_stories_permissions_user_default_permissions() {
   $permissions['view own field_education'] = array(
     'name' => 'view own field_education',
     'roles' => array(
+      'ARC Collaborator' => 'ARC Collaborator',
+      'ARC Member' => 'ARC Member',
       'Content Manager' => 'Content Manager',
-      'Instructor' => 'Instructor',
-      'Student' => 'Student',
       'administrator' => 'administrator',
     ),
     'module' => 'field_permissions',
@@ -2263,11 +2363,18 @@ function lacuna_stories_permissions_user_default_permissions() {
   $permissions['view own field_gender'] = array(
     'name' => 'view own field_gender',
     'roles' => array(
+      'ARC Collaborator' => 'ARC Collaborator',
+      'ARC Member' => 'ARC Member',
       'Content Manager' => 'Content Manager',
-      'Instructor' => 'Instructor',
-      'Student' => 'Student',
       'administrator' => 'administrator',
     ),
+    'module' => 'field_permissions',
+  );
+
+  // Exported permission: 'view own field_how_i_learn'.
+  $permissions['view own field_how_i_learn'] = array(
+    'name' => 'view own field_how_i_learn',
+    'roles' => array(),
     'module' => 'field_permissions',
   );
 
@@ -2275,9 +2382,9 @@ function lacuna_stories_permissions_user_default_permissions() {
   $permissions['view own field_major_degree'] = array(
     'name' => 'view own field_major_degree',
     'roles' => array(
+      'ARC Collaborator' => 'ARC Collaborator',
+      'ARC Member' => 'ARC Member',
       'Content Manager' => 'Content Manager',
-      'Instructor' => 'Instructor',
-      'Student' => 'Student',
       'administrator' => 'administrator',
     ),
     'module' => 'field_permissions',
@@ -2287,8 +2394,8 @@ function lacuna_stories_permissions_user_default_permissions() {
   $permissions['view own field_status'] = array(
     'name' => 'view own field_status',
     'roles' => array(
+      'ARC Member' => 'ARC Member',
       'Content Manager' => 'Content Manager',
-      'Instructor' => 'Instructor',
       'administrator' => 'administrator',
     ),
     'module' => 'field_permissions',
@@ -2298,9 +2405,9 @@ function lacuna_stories_permissions_user_default_permissions() {
   $permissions['view own field_year_in_program'] = array(
     'name' => 'view own field_year_in_program',
     'roles' => array(
+      'ARC Collaborator' => 'ARC Collaborator',
+      'ARC Member' => 'ARC Member',
       'Content Manager' => 'Content Manager',
-      'Instructor' => 'Instructor',
-      'Student' => 'Student',
       'administrator' => 'administrator',
     ),
     'module' => 'field_permissions',
@@ -2310,9 +2417,9 @@ function lacuna_stories_permissions_user_default_permissions() {
   $permissions['view own og_user_node'] = array(
     'name' => 'view own og_user_node',
     'roles' => array(
+      'ARC Collaborator' => 'ARC Collaborator',
+      'ARC Member' => 'ARC Member',
       'Content Manager' => 'Content Manager',
-      'Instructor' => 'Instructor',
-      'Student' => 'Student',
       'administrator' => 'administrator',
     ),
     'module' => 'field_permissions',
@@ -2322,9 +2429,9 @@ function lacuna_stories_permissions_user_default_permissions() {
   $permissions['view own unpublished content'] = array(
     'name' => 'view own unpublished content',
     'roles' => array(
+      'ARC Collaborator' => 'ARC Collaborator',
+      'ARC Member' => 'ARC Member',
       'Content Manager' => 'Content Manager',
-      'Instructor' => 'Instructor',
-      'Student' => 'Student',
       'administrator' => 'administrator',
     ),
     'module' => 'node',

@@ -52,6 +52,9 @@ function lacuna_stories_content_types_wysiwyg_default_profiles() {
           'paste' => 1,
           'removeformat' => 1,
         ),
+        'table' => array(
+          'tablecontrols' => 1,
+        ),
         'drupal' => array(
           'media' => 1,
           'break' => 1,

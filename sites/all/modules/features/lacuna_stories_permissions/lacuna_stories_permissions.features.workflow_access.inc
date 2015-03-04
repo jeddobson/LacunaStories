@@ -27,12 +27,12 @@ function lacuna_stories_permissions_workflow_access_features_default_settings() 
     'grant_update' => 1,
     'grant_delete' => 1,
   );
-  $workflows['materials_publication_states']['draft']['Instructor'] = array(
+  $workflows['materials_publication_states']['draft']['ARC Member'] = array(
     'grant_view' => 1,
     'grant_update' => 1,
     'grant_delete' => 1,
   );
-  $workflows['materials_publication_states']['draft']['Student'] = array(
+  $workflows['materials_publication_states']['draft']['ARC Collaborator'] = array(
     'grant_view' => 0,
     'grant_update' => 0,
     'grant_delete' => 0,
@@ -53,12 +53,12 @@ function lacuna_stories_permissions_workflow_access_features_default_settings() 
     'grant_update' => 1,
     'grant_delete' => 1,
   );
-  $workflows['materials_publication_states']['ready_for_annotation']['Instructor'] = array(
+  $workflows['materials_publication_states']['ready_for_annotation']['ARC Member'] = array(
     'grant_view' => 1,
     'grant_update' => 0,
     'grant_delete' => 0,
   );
-  $workflows['materials_publication_states']['ready_for_annotation']['Student'] = array(
+  $workflows['materials_publication_states']['ready_for_annotation']['ARC Collaborator'] = array(
     'grant_view' => 1,
     'grant_update' => 0,
     'grant_delete' => 0,

@@ -79,11 +79,10 @@ function lacuna_stories_permissions_strongarm() {
       2 => 4,
     ),
     'view' => array(
-      0 => 5,
-      1 => 6,
-      2 => 3,
-      3 => 4,
+      0 => 3,
+      1 => 4,
     ),
+    'per_node' => 1,
   );
   $export['content_access_document'] = $strongarm;
 

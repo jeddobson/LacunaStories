@@ -262,29 +262,6 @@ function lacuna_stories_content_types_taxonomy_default_vocabularies() {
         ),
       ),
     ),
-    'priority' => array(
-      'name' => 'Priority',
-      'machine_name' => 'priority',
-      'description' => 'Is this material required, optional, something else?',
-      'hierarchy' => 0,
-      'module' => 'taxonomy',
-      'weight' => 0,
-      'rdf_mapping' => array(
-        'rdftype' => array(
-          0 => 'skos:ConceptScheme',
-        ),
-        'name' => array(
-          'predicates' => array(
-            0 => 'dc:title',
-          ),
-        ),
-        'description' => array(
-          'predicates' => array(
-            0 => 'rdfs:comment',
-          ),
-        ),
-      ),
-    ),
     'tags' => array(
       'name' => 'Tags',
       'machine_name' => 'tags',
@@ -309,32 +286,9 @@ function lacuna_stories_content_types_taxonomy_default_vocabularies() {
       ),
     ),
     'topics' => array(
-      'name' => 'Topics',
+      'name' => 'Cases',
       'machine_name' => 'topics',
-      'description' => 'Themes or sub-topics to organize content',
-      'hierarchy' => 0,
-      'module' => 'taxonomy',
-      'weight' => 0,
-      'rdf_mapping' => array(
-        'rdftype' => array(
-          0 => 'skos:ConceptScheme',
-        ),
-        'name' => array(
-          'predicates' => array(
-            0 => 'dc:title',
-          ),
-        ),
-        'description' => array(
-          'predicates' => array(
-            0 => 'rdfs:comment',
-          ),
-        ),
-      ),
-    ),
-    'unit' => array(
-      'name' => 'Unit',
-      'machine_name' => 'unit',
-      'description' => 'Organize content by units in the syllabus',
+      'description' => 'Cases',
       'hierarchy' => 0,
       'module' => 'taxonomy',
       'weight' => 0,

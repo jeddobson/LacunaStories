@@ -38,8 +38,8 @@ function lacuna_stories_content_types_default_Workflow() {
       "2" : "authenticated user",
       "3" : "administrator",
       "4" : "Content Manager",
-      "5" : "Instructor",
-      "6" : "Student"
+      "5" : "ARC Member",
+      "6" : "ARC Collaborator"
     }
   }');
 
@@ -107,9 +107,9 @@ function lacuna_stories_content_types_node_info() {
       'help' => '',
     ),
     'course_or_other_group' => array(
-      'name' => t('Course or Other Group'),
+      'name' => t('Group'),
       'base' => 'node_content',
-      'description' => t('Any group of students, typically used to organized content by course'),
+      'description' => t('Any group of people, used to share artifacts within a group.'),
       'has_title' => '1',
       'title_label' => t('Title'),
       'help' => '',
@@ -125,9 +125,9 @@ function lacuna_stories_content_types_node_info() {
     'thread' => array(
       'name' => t('Thread'),
       'base' => 'node_content',
-      'description' => t('This content type stitches together items in a Sewing Kit.'),
+      'description' => t('Stitch annotations together into a thread.'),
       'has_title' => '1',
-      'title_label' => t('Title of My Thread'),
+      'title_label' => t('Title'),
       'help' => '',
     ),
     'webform' => array(
