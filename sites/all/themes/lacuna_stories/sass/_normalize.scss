@@ -288,8 +288,11 @@ sup {
   position: relative;
   vertical-align: baseline;
 }
+/* Superscript tweaks for better layout */
 sup {
-  top: -0.5em;
+  top: -0.3em;
+  padding-left: .2em;
+  font-size: x-small;
 }
 sub {
   bottom: -0.25em;
