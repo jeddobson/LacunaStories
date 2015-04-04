@@ -72,7 +72,7 @@ $h6-font-size: 0.67 * $base-font-size;
 
 
 // Our web font stack
-@import url(http://fonts.googleapis.com/css?family=Libre+Baskerville|Carrois+Gothic+SC);
+@import url("//fonts.googleapis.com/css?family=Libre+Baskerville|Noto+Sans);");
 
 // First, let's create some font stacks.
 $times-new-roman: "Times New Roman", Times, Georgia, "DejaVu Serif", serif;
@@ -89,9 +89,10 @@ $arial:           Arial, Helvetica, "Nimbus Sans L", sans-serif;
 $courier:         "Courier New", "DejaVu Sans Mono", monospace, sans-serif;
 
 // Now create some variables for the font stacks we want to use on this site.
-$base-font-family: 'Libre Baskerville', $georgia; // The font family set on the html element.
-$font-body:        'Libre Baskerville', $georgia;
+$base-font-family: 'Noto Sans', $verdana; // The font family set on the html element.
+$font-body:        'Noto Sans', $verdana;
 $font-monospace:   $courier;
+$base-serif-font-family: 'Baskerville Libre', $georgia;
 
 //
 // Colors, etc.

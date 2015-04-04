@@ -6,7 +6,7 @@
  * of these @include files will be combined into a single file.
  */
 /* Import Sass mixins, variables, Compass modules, etc. */
-@import url(http://fonts.googleapis.com/css?family=Libre+Baskerville|Carrois+Gothic+SC);
+@import url("//fonts.googleapis.com/css?family=Libre+Baskerville|Noto+Sans);");
 /* HTML element (SMACSS base) rules */
 /**
  * @file
@@ -112,7 +112,7 @@ audio:not([controls]) {
  */
 /* line 106, ../sass/_normalize.scss */
 html {
-  font-family: "Libre Baskerville", Georgia, "Times New Roman", "DejaVu Serif", serif;
+  font-family: "Noto Sans", Verdana, Tahoma, "DejaVu Sans", sans-serif;
   /* 1 */
   font-size: 100%;
   /* 3 */
