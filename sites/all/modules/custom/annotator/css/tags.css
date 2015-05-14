@@ -1,0 +1,7 @@
+.ui-autocomplete-category {
+  font-weight: bold;
+  border-bottom: 1px solid black;
+  padding-bottom: 5px;
+  margin-top: 10px;
+  text-transform: uppercase;
+}
