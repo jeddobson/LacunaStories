@@ -307,6 +307,259 @@ function lacuna_stories_content_types_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'exclude_node_title_content_type_modes_annotation';
+  $strongarm->value = array(
+    'full' => 0,
+    'teaser' => 0,
+    'rss' => 0,
+    'search_index' => 0,
+    'search_result' => 0,
+    'token' => 0,
+    'workflow_tab' => 0,
+    'nodeform' => 0,
+  );
+  $export['exclude_node_title_content_type_modes_annotation'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'exclude_node_title_content_type_modes_article';
+  $strongarm->value = array(
+    'full' => 0,
+    'teaser' => 0,
+    'rss' => 0,
+    'search_index' => 0,
+    'search_result' => 0,
+    'token' => 0,
+    'workflow_tab' => 0,
+    'nodeform' => 0,
+  );
+  $export['exclude_node_title_content_type_modes_article'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'exclude_node_title_content_type_modes_biblio';
+  $strongarm->value = array(
+    'full' => 0,
+    'teaser' => 0,
+    'rss' => 0,
+    'search_index' => 0,
+    'search_result' => 0,
+    'token' => 0,
+    'workflow_tab' => 0,
+    'nodeform' => 0,
+  );
+  $export['exclude_node_title_content_type_modes_biblio'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'exclude_node_title_content_type_modes_blog';
+  $strongarm->value = array(
+    'full' => 0,
+    'teaser' => 0,
+    'rss' => 0,
+    'search_index' => 0,
+    'search_result' => 0,
+    'token' => 0,
+    'workflow_tab' => 0,
+    'nodeform' => 0,
+  );
+  $export['exclude_node_title_content_type_modes_blog'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'exclude_node_title_content_type_modes_course';
+  $strongarm->value = array(
+    'full' => 0,
+    'teaser' => 0,
+    'rss' => 0,
+    'search_index' => 0,
+    'search_result' => 0,
+    'token' => 0,
+    'workflow_tab' => 0,
+    'nodeform' => 0,
+  );
+  $export['exclude_node_title_content_type_modes_course'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'exclude_node_title_content_type_modes_document';
+  $strongarm->value = array(
+    'full' => 0,
+    'teaser' => 0,
+    'rss' => 0,
+    'search_index' => 0,
+    'search_result' => 0,
+    'token' => 0,
+    'workflow_tab' => 0,
+    'nodeform' => 0,
+  );
+  $export['exclude_node_title_content_type_modes_document'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'exclude_node_title_content_type_modes_forum';
+  $strongarm->value = array(
+    'full' => 0,
+    'teaser' => 0,
+    'rss' => 0,
+    'search_index' => 0,
+    'search_result' => 0,
+    'token' => 0,
+    'workflow_tab' => 0,
+    'nodeform' => 0,
+  );
+  $export['exclude_node_title_content_type_modes_forum'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'exclude_node_title_content_type_modes_page';
+  $strongarm->value = array(
+    'full' => 'full',
+    'teaser' => 0,
+    'rss' => 0,
+    'search_index' => 0,
+    'search_result' => 0,
+    'token' => 0,
+    'workflow_tab' => 0,
+    'nodeform' => 0,
+  );
+  $export['exclude_node_title_content_type_modes_page'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'exclude_node_title_content_type_modes_thread';
+  $strongarm->value = array(
+    'full' => 0,
+    'teaser' => 0,
+    'rss' => 0,
+    'search_index' => 0,
+    'search_result' => 0,
+    'token' => 0,
+    'workflow_tab' => 0,
+    'nodeform' => 0,
+  );
+  $export['exclude_node_title_content_type_modes_thread'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'exclude_node_title_content_type_modes_webform';
+  $strongarm->value = array(
+    'full' => 0,
+    'teaser' => 0,
+    'rss' => 0,
+    'search_index' => 0,
+    'search_result' => 0,
+    'token' => 0,
+    'workflow_tab' => 0,
+    'nodeform' => 0,
+  );
+  $export['exclude_node_title_content_type_modes_webform'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'exclude_node_title_content_type_value_annotation';
+  $strongarm->value = 'none';
+  $export['exclude_node_title_content_type_value_annotation'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'exclude_node_title_content_type_value_article';
+  $strongarm->value = 'none';
+  $export['exclude_node_title_content_type_value_article'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'exclude_node_title_content_type_value_biblio';
+  $strongarm->value = 'none';
+  $export['exclude_node_title_content_type_value_biblio'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'exclude_node_title_content_type_value_blog';
+  $strongarm->value = 'none';
+  $export['exclude_node_title_content_type_value_blog'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'exclude_node_title_content_type_value_course';
+  $strongarm->value = 'none';
+  $export['exclude_node_title_content_type_value_course'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'exclude_node_title_content_type_value_document';
+  $strongarm->value = 'none';
+  $export['exclude_node_title_content_type_value_document'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'exclude_node_title_content_type_value_forum';
+  $strongarm->value = 'none';
+  $export['exclude_node_title_content_type_value_forum'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'exclude_node_title_content_type_value_page';
+  $strongarm->value = 'user';
+  $export['exclude_node_title_content_type_value_page'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'exclude_node_title_content_type_value_thread';
+  $strongarm->value = 'none';
+  $export['exclude_node_title_content_type_value_thread'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'exclude_node_title_content_type_value_webform';
+  $strongarm->value = 'none';
+  $export['exclude_node_title_content_type_value_webform'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'exclude_node_title_nid_list';
+  $strongarm->value = array(
+    0 => '359',
+  );
+  $export['exclude_node_title_nid_list'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'exclude_node_title_search';
+  $strongarm->value = 0;
+  $export['exclude_node_title_search'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'exclude_node_title_translation_sync';
+  $strongarm->value = TRUE;
+  $export['exclude_node_title_translation_sync'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'field_bundle_settings_node__annotation';
   $strongarm->value = array(
     'view_modes' => array(
