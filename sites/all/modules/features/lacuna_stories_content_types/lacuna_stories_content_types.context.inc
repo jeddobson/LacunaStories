@@ -27,6 +27,11 @@ function lacuna_stories_content_types_context_default_contexts() {
         'node_form' => '0',
       ),
     ),
+    'user' => array(
+      'values' => array(
+        'authenticated user' => 'authenticated user',
+      ),
+    ),
   );
   $context->reactions = array(
     'block' => array(
@@ -40,7 +45,7 @@ function lacuna_stories_content_types_context_default_contexts() {
       ),
     ),
   );
-  $context->condition_mode = 0;
+  $context->condition_mode = 1;
 
   // Translatables
   // Included for use with string extractors like potx.
