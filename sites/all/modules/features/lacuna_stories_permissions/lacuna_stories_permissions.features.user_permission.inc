@@ -358,6 +358,16 @@ function lacuna_stories_permissions_user_default_permissions() {
     'module' => 'context_ui',
   );
 
+  // Exported permission: 'administer exclude node title'.
+  $permissions['administer exclude node title'] = array(
+    'name' => 'administer exclude node title',
+    'roles' => array(
+      'Content Manager' => 'Content Manager',
+      'administrator' => 'administrator',
+    ),
+    'module' => 'exclude_node_title',
+  );
+
   // Exported permission: 'administer features'.
   $permissions['administer features'] = array(
     'name' => 'administer features',
@@ -392,6 +402,15 @@ function lacuna_stories_permissions_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'flag',
+  );
+
+  // Exported permission: 'administer front page'.
+  $permissions['administer front page'] = array(
+    'name' => 'administer front page',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'front_page',
   );
 
   // Exported permission: 'administer group'.
@@ -1869,6 +1888,26 @@ function lacuna_stories_permissions_user_default_permissions() {
     'module' => 'workflow',
   );
 
+  // Exported permission: 'exclude any node title'.
+  $permissions['exclude any node title'] = array(
+    'name' => 'exclude any node title',
+    'roles' => array(
+      'Content Manager' => 'Content Manager',
+      'administrator' => 'administrator',
+    ),
+    'module' => 'exclude_node_title',
+  );
+
+  // Exported permission: 'exclude own node title'.
+  $permissions['exclude own node title'] = array(
+    'name' => 'exclude own node title',
+    'roles' => array(
+      'Content Manager' => 'Content Manager',
+      'administrator' => 'administrator',
+    ),
+    'module' => 'exclude_node_title',
+  );
+
   // Exported permission: 'flag irb_form_completed'.
   $permissions['flag irb_form_completed'] = array(
     'name' => 'flag irb_form_completed',
@@ -2197,6 +2236,22 @@ function lacuna_stories_permissions_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'search',
+  );
+
+  // Exported permission: 'use exclude node title'.
+  $permissions['use exclude node title'] = array(
+    'name' => 'use exclude node title',
+    'roles' => array(
+      'ARC Collaborator' => 'ARC Collaborator',
+      'ARC Member' => 'ARC Member',
+      'Content Manager' => 'Content Manager',
+      'Instructor' => 'Instructor',
+      'Student' => 'Student',
+      'administrator' => 'administrator',
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
+    ),
+    'module' => 'exclude_node_title',
   );
 
   // Exported permission: 'use flag import'.
