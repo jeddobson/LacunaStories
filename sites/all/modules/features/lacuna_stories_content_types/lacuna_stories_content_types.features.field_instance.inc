@@ -2288,43 +2288,6 @@ function lacuna_stories_content_types_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-tags-field_suggested_tag'
-  $field_instances['taxonomy_term-tags-field_suggested_tag'] = array(
-    'bundle' => 'tags',
-    'default_value' => array(
-      0 => array(
-        'value' => 0,
-      ),
-    ),
-    'deleted' => 0,
-    'description' => 'Promote this tag to a "suggested tag" by checking this box.',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'list',
-        'settings' => array(),
-        'type' => 'list_default',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'taxonomy_term',
-    'field_name' => 'field_suggested_tag',
-    'label' => 'Suggested',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(
-        'display_label' => 0,
-      ),
-      'type' => 'options_onoff',
-      'weight' => 1,
-    ),
-  );
-
   // Exported field_instance: 'taxonomy_term-topics-field_image'
   $field_instances['taxonomy_term-topics-field_image'] = array(
     'bundle' => 'topics',
@@ -2792,13 +2755,11 @@ function lacuna_stories_content_types_field_default_field_instances() {
   t('Post Icon');
   t('Power');
   t('Private');
-  t('Promote this tag to a "suggested tag" by checking this box.');
   t('Provide a basic explanation for why you categorized this artifact as you did.');
   t('Quote');
   t('Ranges');
   t('References to the content stitched together');
   t('Start typing the name of materials on Lacuna Stories here, and they will autofill. Add everything that gets referenced or mentioned in your post. By using this feature, your writing will be linked with other materials on the site, and the networked thinking you do will be represented in the site\'s visualizations.');
-  t('Suggested');
   t('Syllabus File');
   t('Syllabus PDF');
   t('Tags');

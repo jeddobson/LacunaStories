@@ -13,10 +13,11 @@ class TagsAnnotatorPlugin extends AnnotatorPlugin {
       ->propertyCondition('vid', (int) $tags->vid, '=')
       ->execute();
     $tags = array();  // We're done with the previous $tags
+    $flag = flag_get_flag('curated_tag');
     if (!empty($result['taxonomy_term'])) {
       $terms = taxonomy_term_load_multiple(array_keys($result['taxonomy_term']));
       foreach ($terms as $term) {
-        if ($term->field_suggested_tag[LANGUAGE_NONE][0]['value'] == 1) {
+        if ($flag && $flag->is_flagged($term->tid)) {
           $category = 'curated tags';
         } else {
           $category = 'custom tags';
