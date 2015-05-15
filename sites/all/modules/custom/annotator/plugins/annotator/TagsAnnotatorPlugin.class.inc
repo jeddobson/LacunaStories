@@ -25,6 +25,18 @@ class TagsAnnotatorPlugin extends AnnotatorPlugin {
         array_push($tags, array('label' => $term->name, 'category' => $category));
       }
     }
+
+    // Sort so that "curated tags" are on top
+    // NB: curated comes before custom in alphabetical sort
+    // if these labels change, then this sort algorithm needs
+    // to update, too
+    usort($tags, function($a, $b) {
+      if ($a['category'] == $b['category']) {
+        return (strtolower($a['label']) < strtolower($b['label'])) ? -1 : 1;
+      }
+      return ($a['category'] < $b['category']) ? -1 : 1;
+    });
+
     // Loaded in annotator_tags.js
     drupal_add_js(drupal_get_path('module', 'annotator') . '/js/autocomplete_categories.js', array('weight' => 10));
     drupal_add_js(array('annotator_tags' => (array) $tags), 'setting');
