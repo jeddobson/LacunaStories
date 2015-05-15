@@ -1133,6 +1133,7 @@ function lacuna_stories_permissions_user_default_permissions() {
       'ARC Collaborator' => 'ARC Collaborator',
       'ARC Member' => 'ARC Member',
       'Content Manager' => 'Content Manager',
+      'Labinar Students' => 'Labinar Students',
       'administrator' => 'administrator',
     ),
     'module' => 'node',
@@ -1726,6 +1727,7 @@ function lacuna_stories_permissions_user_default_permissions() {
       'ARC Collaborator' => 'ARC Collaborator',
       'ARC Member' => 'ARC Member',
       'Content Manager' => 'Content Manager',
+      'Labinar Students' => 'Labinar Students',
       'administrator' => 'administrator',
     ),
     'module' => 'node',
@@ -1908,6 +1910,16 @@ function lacuna_stories_permissions_user_default_permissions() {
     'module' => 'exclude_node_title',
   );
 
+  // Exported permission: 'flag curated_tag'.
+  $permissions['flag curated_tag'] = array(
+    'name' => 'flag curated_tag',
+    'roles' => array(
+      'Content Manager' => 'Content Manager',
+      'administrator' => 'administrator',
+    ),
+    'module' => 'flag',
+  );
+
   // Exported permission: 'flag irb_form_completed'.
   $permissions['flag irb_form_completed'] = array(
     'name' => 'flag irb_form_completed',
@@ -1996,6 +2008,7 @@ function lacuna_stories_permissions_user_default_permissions() {
       'ARC Collaborator' => 'ARC Collaborator',
       'ARC Member' => 'ARC Member',
       'Content Manager' => 'Content Manager',
+      'Labinar Students' => 'Labinar Students',
       'administrator' => 'administrator',
     ),
     'module' => 'workflow',
@@ -2189,6 +2202,16 @@ function lacuna_stories_permissions_user_default_permissions() {
     'module' => 'shortcut',
   );
 
+  // Exported permission: 'unflag curated_tag'.
+  $permissions['unflag curated_tag'] = array(
+    'name' => 'unflag curated_tag',
+    'roles' => array(
+      'Content Manager' => 'Content Manager',
+      'administrator' => 'administrator',
+    ),
+    'module' => 'flag',
+  );
+
   // Exported permission: 'unflag irb_form_completed'.
   $permissions['unflag irb_form_completed'] = array(
     'name' => 'unflag irb_form_completed',
@@ -2245,8 +2268,6 @@ function lacuna_stories_permissions_user_default_permissions() {
       'ARC Collaborator' => 'ARC Collaborator',
       'ARC Member' => 'ARC Member',
       'Content Manager' => 'Content Manager',
-      'Instructor' => 'Instructor',
-      'Student' => 'Student',
       'administrator' => 'administrator',
       'anonymous user' => 'anonymous user',
       'authenticated user' => 'authenticated user',

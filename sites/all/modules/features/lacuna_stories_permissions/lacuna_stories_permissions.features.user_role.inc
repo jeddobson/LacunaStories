@@ -16,17 +16,5 @@ function lacuna_stories_permissions_user_default_roles() {
     'weight' => 3,
   );
 
-  // Exported role: Instructor.
-  $roles['Instructor'] = array(
-    'name' => 'Instructor',
-    'weight' => 4,
-  );
-
-  // Exported role: Student.
-  $roles['Student'] = array(
-    'name' => 'Student',
-    'weight' => 5,
-  );
-
   return $roles;
 }

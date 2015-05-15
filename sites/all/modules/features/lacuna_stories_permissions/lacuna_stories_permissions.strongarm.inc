@@ -84,6 +84,7 @@ function lacuna_stories_permissions_strongarm() {
       1 => 3,
       2 => 4,
     ),
+    'per_node' => 1,
   );
   $export['content_access_webform'] = $strongarm;
 
