@@ -28,7 +28,7 @@ function lacuna_stories_views_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'tagclouds_display_type';
-  $strongarm->value = 'style';
+  $strongarm->value = 'count';
   $export['tagclouds_display_type'] = $strongarm;
 
   $strongarm = new stdClass();
