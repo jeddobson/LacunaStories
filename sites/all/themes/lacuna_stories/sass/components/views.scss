@@ -215,3 +215,9 @@ table.views-table {
 div#block-views-bibliography-block {
   font-family: $base-serif-font-family;
 }
+// This block appears on the "Curate Tags" view page
+#block-tagclouds-1 {
+  h2 {
+    padding-bottom: 25px;
+  }
+}
