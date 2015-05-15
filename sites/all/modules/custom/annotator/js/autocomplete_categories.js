@@ -17,6 +17,7 @@ $.widget( "custom.catcomplete", $.ui.autocomplete, {
         li = that._renderItemData( ul, item );
         if ( item.category ) {
           li.attr( "aria-label", item.category + " : " + item.label );
+          $(li).addClass('annotator-tags-item');
         }
       });
     }
