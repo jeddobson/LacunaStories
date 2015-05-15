@@ -19,6 +19,7 @@ features[menu_links][] = main-menu_bibliography:biblio
 features[menu_links][] = main-menu_connect:<nolink>
 features[menu_links][] = main-menu_contact:contact
 features[menu_links][] = main-menu_create:<nolink>
+features[menu_links][] = main-menu_curate-tags:curate-tags
 features[menu_links][] = main-menu_explore:<nolink>
 features[menu_links][] = main-menu_help:<nolink>
 features[menu_links][] = main-menu_logout:user/logout
