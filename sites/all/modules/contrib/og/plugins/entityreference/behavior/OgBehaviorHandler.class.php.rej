@@ -1,0 +1,13 @@
+--- a/plugins/entityreference/behavior/OgBehaviorHandler.class.php
++++ b/plugins/entityreference/behavior/OgBehaviorHandler.class.php
+@@ -260,7 +260,9 @@
+     }
+     else {
+       foreach ($items as $item) {
+-        $values['default'][] = $item['target_id'];
++        if (!entityreference_field_is_empty($item, $field) && $item['target_id'] !== NULL) {
++          $values['default'][] = $item['target_id'];
++        }
+       }
+     }
+ 
