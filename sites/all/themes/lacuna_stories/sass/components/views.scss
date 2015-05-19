@@ -220,4 +220,12 @@ div#block-views-bibliography-block {
   h2 {
     padding-bottom: 25px;
   }
+
+  // Don't display them as links
+  a.tagclouds {
+    text-decoration: none;
+    cursor: text;
+    font-color: black;
+  }
+
 }
