@@ -285,9 +285,8 @@ function lacuna_stories_menus_menu_default_menu_links() {
     'external' => 0,
     'has_children' => 1,
     'expanded' => 0,
-    'weight' => -49,
+    'weight' => -45,
     'customized' => 1,
-    'parent_identifier' => 'main-menu_account:<nolink>',
   );
   // Exported menu link: main-menu_my-profile:user
   $menu_links['main-menu_my-profile:user'] = array(
