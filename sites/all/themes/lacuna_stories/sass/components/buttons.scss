@@ -102,3 +102,15 @@ input[type="submit"] {
   margin-left: auto;
   margin-right: auto;
 }
+
+// Display flag actions as buttons
+.view-curate-tags {
+  .flag-link-toggle {
+    @extend .lacuna-button;
+  }
+  .unflag-action {
+    @extend .lacuna-button-blue;
+  }
+  .flag-action {
+  }
+}
