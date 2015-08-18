@@ -2175,7 +2175,7 @@ function lacuna_stories_content_types_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_image',
     'label' => 'Upload a Cover Image for your artifact.',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'alt_field' => 0,
       'default_image' => 0,
@@ -2195,6 +2195,8 @@ function lacuna_stories_content_types_field_default_field_instances() {
           'flickr' => 0,
           'private' => 'private',
           'public' => 'public',
+          'vimeo' => 0,
+          'youtube' => 0,
         ),
         'allowed_types' => array(
           'audio' => 0,
