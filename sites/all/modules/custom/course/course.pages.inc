@@ -33,7 +33,7 @@ function course_authcode_form_submit($form, &$form_state) {
   $authcode = variable_get('course_authcode');
   if ($authcode == $form['authcode']['#value']) {
     // save a token for a week to ensure the Auth Code was entered on subsequent pages
-    // see course_access()
+    // see course_setup_access()
     global $user;
     $key = "Course_Auth_Code_User_" . $user->uid;
     $token = md5(uniqid(rand(), true));
@@ -75,6 +75,50 @@ function course_create() {
   $form['#attached']['js'] = array("$path/course.js");
 
   return drupal_render($form);
+}
+
+/**
+ * @return string
+ *
+ * A custom form so that instructors can easily add annotation tags to their course
+ */
+function course_annotation_tags_add() {
+  $gid = course_get_selected_course();
+  if ($gid == FALSE) {
+    drupal_set_message(t('You are not associated with a course. Therefore, you cannot add tags for annotations.'), 'error');
+    drupal_exit();
+  }
+  drupal_set_title('Add Tags for Annotations');
+  $form = array(
+    'term' => array(
+      '#type' => 'textfield',
+      '#title' => t('Tag name'),
+      '#description' => t('Enter the tag for annotations as you would like it to appear to students. You may use spaces.'),
+      '#size' => 36,
+      '#required' => TRUE
+    ),
+    'submit' => array(
+      '#type' => 'submit',
+      '#value' => t('Submit'),
+    )
+  );
+
+	return $form;
+}
+
+/**
+ * Associate the annotation tag submitted with the appropriate course
+ */
+function course_annotation_tags_add_submit($form, &$form_state) {
+  $gid = course_get_selected_course();
+  if (!$gid) {
+    drupal_set_message(t('You are not associated with any course. Therefore, we cannot create any tags for annotations.'), 'error');
+    drupal_exit();
+  }
+  $vocab = taxonomy_vocabulary_machine_name_load('annotation_tags');
+  $term = $form_state['values']['term'];
+  course_create_taxonomy_term($vocab, $term);
+  drupal_set_message(t('"' . $term . '" has been added to the list of tags for annotations.'));
 }
 
 /*
