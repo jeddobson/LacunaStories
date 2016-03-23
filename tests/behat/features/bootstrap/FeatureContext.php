@@ -49,6 +49,7 @@ class FeatureContext extends DrupalContext implements SnippetAcceptingContext {
    * @param $node_type
    * @param $node_title
    *
+   * @throws \Exception
    * Find a node by its title. If duplicate node titles, will return the first.
    * @return bool|mixed
    */
@@ -73,6 +74,8 @@ class FeatureContext extends DrupalContext implements SnippetAcceptingContext {
 
       if (!empty($result['node'])) {
         $found_node = array_pop($result['node']);
+      } else {
+        throw new \Exception(sprintf('Could not find node %s of type %s!', $node_title, $node_type));
       }
     }
     return $found_node;
@@ -254,6 +257,67 @@ class FeatureContext extends DrupalContext implements SnippetAcceptingContext {
       $annotation = node_submit($annotation);
       node_save($annotation);
     }
+  }
+
+  /**
+   * @param \Behat\Gherkin\Node\TableNode $tagsTable
+   * @throws \Exception
+   * @Given tag <tag> for course <course>:
+   */
+  public function createTags(TableNode $tagsTable) {
+    foreach ($tagsTable->getHash() as $data) {
+      if (!isset($data['tag']) or !isset($data['course'])) {
+        throw new Exception('Missing information to create tags. Need tag and course.');
+      }
+      $vocab = taxonomy_vocabulary_machine_name_load('annotation_tags');
+      $course = $this->findNodeByTitle('course', $data['course']);
+      $term = new stdClass();
+      $term->name = $data['tag'];
+      $term->vid = $vocab->vid;
+      $term->field_term_course[LANGUAGE_NONE][0]['target_id'] = $course->nid;
+
+      if (!taxonomy_term_save($term)) {
+        throw new Exception(sprintf('Could not create term %s'), $data['tag']);
+      }
+    }
+  }
+
+  /**
+   * @param $option
+   * @param $field
+   * @throws \Exception
+   *
+   * @Then I should be able to select :option in the :field field
+   */
+  public function iShouldBeAbleToSelect($option, $field) {
+    $select = $this->getSession()->getPage()->find('css', $field);
+    if (!$select->find('named', array('option', $option))) {
+      throw new \Exception(sprintf("Could not select '%s' in '%s'", $option, $field));
+    }
+  }
+
+  /**
+   * @param $option
+   * @param $field
+   * @throws \Exception
+   *
+   * @Then I should not be able to select :option in the :field field
+   */
+  public function iShouldNotBeAbleToSelect($option, $field) {
+    $select = $this->getSession()->getPage()->find('css', $field);
+    if ($select->find('named', array('option', $option))) {
+      throw new \Exception(sprintf("Was able to select '%s' in '%s'", $option, $field));
+    }
+  }
+
+  /**
+   * @AfterScenario
+   *
+   * Clean up the tags we added
+   */
+  public function cleanUpTags() {
+//    $vocab = taxonomy_vocabulary_machine_name_load('annotation_tags');
+//    $tree = taxonomy_get_tree($vocab->vid);
   }
 }
 

@@ -44,6 +44,36 @@ select#edit-thread-add {
   }
 }
 
+/* Remove from thread view block */
+h2#stitchings {
+  text-align: center;
+}
+div#block-views-stitchings-block-1,
+div.view-stitchings {
+  margin-left: 5%;
+  margin-right: 5%;
+  .fieldset-wrapper {
+    text-align: center;
+  }
+  th.views-field-views-bulk-operations {
+    div.form-type-checkbox {
+      margin-left: 0em !important;
+      margin-right: 0em !important;
+    }
+  }
+  div.tabledrag-toggle-weight-wrapper {
+    display: none;
+  }
+  fieldset#edit-select {
+    border: none;
+    input[id^='edit-actionsewing-kit-remove'] {
+      width: auto;
+      height: 50px;
+      font-size: 14pt;
+    }
+  }
+}
+
 
 /* Center the "Select all" options */
 .vbo-fieldset-select-all {
@@ -284,5 +314,19 @@ div#block-views-cite-as-block {
   }
   div.view-grouping-header {
     font-size: large;
+  }
+  .views-field-views-bulk-operations {
+    padding-right: 25px;
+    padding-left: 5px;
+    width: 15px;
+  }
+  th.views-field-name {
+    width: 250px;
+  }
+  th.views-field-mail {
+    //width: 200px;
+  }
+  caption {
+    font-weight: bold;
   }
 }
