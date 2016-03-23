@@ -70,7 +70,10 @@ We highly recommend that you install [Drush](http://www.drush.org/en/master/) to
 After installing, there are a few steps you will want to take to improve the user experience.
 
 * Disable warnings and error messages (admin/config/development/logging)
+
 * Enable compression and caching (admin/config/development/performance)
+
+* To support a large number of users and annotations, add "memory_limit = 1024M" to your php.ini (PHP) and "max_allowed_packet=32M" to your my.cnf (MySQL)
 
 * Review the Course Creation settings (admin/config/content/lacuna-courses). These are the settings that determine the defaults for new courses. You may wish to require a password before instructors can create new courses. If so, you can set that here. You can also set the default genres, media, and priorities for documents. Be sure to click "Submit" at the bottom of the page after confirming these settings, even if you haven't changed anything; this will ensure that your site has initial values for these items.
 
