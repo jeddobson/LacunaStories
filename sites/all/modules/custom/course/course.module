@@ -248,7 +248,7 @@ function course_node_view($node, $view_mode, $langcode) {
  */
 function course_views_query_alter(&$view, &$query) {
   // List of the views to alter
-  $where_node_views = array('responses', 'documents', 'threads', 'all_content', 'my_content', 'sewing-kit', 'user_s_responses', 'user_s_comments', 'my_annotations_view', 'peer_groups');
+  $where_node_views = array('responses', 'documents', 'threads', 'all_content', 'my_content', 'sewing-kit', 'user_s_responses', 'user_s_comments', 'annotations_by_user', 'peer_groups');
   $where_user_views = array('people', 'all_emails');
 	$gid = course_get_selected_course();
 
@@ -711,7 +711,7 @@ function course_form_response_node_form_alter(&$form, &$form_state, $form_id) {
 
 // Handle setting custom values
 function course_add_response_form_submit($form, &$form_state) {
-
+  $gid = course_get_selected_course();
   $node = node_form_submit_build_node($form, $form_state);
 	$node->status = NODE_PUBLISHED;
 
@@ -720,10 +720,11 @@ function course_add_response_form_submit($form, &$form_state) {
   // Genre can only have one option, so replace any existing values
   $wrapper->field_response_genre = array($form_state['values']['genre_response']);
   $wrapper->group_content_access->set(OG_CONTENT_ACCESS_PRIVATE);
+  // og_group_ref must be set here so Responses show up for other users
+  $wrapper->og_group_ref->set( array('target_id' => $gid ) );
   $wrapper->save();
 
   // Automatically assign to current course
-  $gid = course_get_selected_course();
   if ($gid && $node->nid) {
     og_group('node', $gid,
       array(

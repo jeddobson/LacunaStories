@@ -284,7 +284,37 @@ function lacuna_visualizations_menu() {
       'page callback' => 'lacuna_visualizations_annotation_dashboard_data',
       'type' => MENU_CALLBACK,
     ),
+    'admin/config/system/visualizations' => array(
+      'title' => 'Dashboard Cache',
+      'description' => 'Modify cache settings for the Annotations Dashboard',
+      'page callback' => 'drupal_get_form',
+      'page arguments' => array('lacuna_visualizations_admin_form'),
+      'access arguments' => array('administer site configuration'),
+      'type' => MENU_NORMAL_ITEM,
+    ),
   );
+}
+
+function lacuna_visualizations_admin_form() {
+  $form = array();
+
+  $form['lacuna_visualization_cache_threshold'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Cache threshold'),
+    '#description' => t('Set the minimum number of annotations in a course before the dashboard is cached.'),
+    '#default_value' => variable_get('lacuna_visualization_cache_threshold', 1000),
+    '#required' => TRUE,
+  );
+
+  $form['lacuna_visualization_cache_ttl'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Cache duration'),
+    '#description' => t('Set the time in hours after which the cache should expire.'),
+    '#default_value' => variable_get('lacuna_visualization_cache_ttl', 24),
+    '#required' => TRUE,
+  );
+
+  return system_settings_form($form);
 }
 
 /**
@@ -650,11 +680,10 @@ function get_uid($annotation) {
 	return $annotation->uid;
 }
 
-function lacuna_visualizations_annotation_dashboard_data() {
-  // Prepare the data for the dashboard, output as JSON
-	$course_id = course_get_selected_course();	// get current course ID
-	// Get all annotations that are on a document or response in the current course
-	$query = db_query('
+function lacuna_visualizations_annotation_dashboard_build_data($course_id) {
+  // Prepare the data for the dashboard
+  // Get all annotations that are on a document or response in the current course
+  $query = db_query('
     SELECT entity_id
     FROM {field_data_field_annotation_reference} AS ar
     LEFT JOIN {og_membership} AS og
@@ -667,18 +696,18 @@ function lacuna_visualizations_annotation_dashboard_data() {
   $results = array();
   // Fields need for db query:
   // created, uid, annotation_reference, text, quote, private, annotation_tags, category
-  $annotations = node_load_multiple($annotation_ids);
+  $annotations = node_load_multiple($annotation_ids); // Most costly function in entire routine
 
-	// Load all document and users at once to speed up query time
-	$documents = node_load_multiple(array_map("get_doc_id", $annotations));
-	$annotators = user_load_multiple(array_map("get_uid", $annotations));
+  // Load all document and users at once to speed up query time
+  $documents = node_load_multiple(array_map("get_doc_id", $annotations));
+  $annotators = user_load_multiple(array_map("get_uid", $annotations));
   foreach ($annotators as $annotator) {
     $userNames[$annotator->uid] = format_username($annotator);
   }
   $terms = array();
-	$field_prefix = 'field_annotation_';	// to convert from Drupal field names to viz
-	// Convert from Drupal format to a simpler data format for viz
-	foreach ($annotations as $annotation) {
+  $field_prefix = 'field_annotation_';	// to convert from Drupal field names to viz
+  // Convert from Drupal format to a simpler data format for viz
+  foreach ($annotations as $annotation) {
     // Create a new data object, populate only with necessary data
     // Make it harder to leak unintended data
     $data = new StdClass();
@@ -687,11 +716,11 @@ function lacuna_visualizations_annotation_dashboard_data() {
     $data->updated = $annotation->changed * 1000;
     $data->uid = $annotation->uid;
 
-		$target_id = $annotation->field_annotation_reference[$annotation->language][0]['target_id'];
-		$data->doc_id = $target_id;
-		$data->documentTitle = $documents[$target_id]->title;
+    $target_id = $annotation->field_annotation_reference[$annotation->language][0]['target_id'];
+    $data->doc_id = $target_id;
+    $data->documentTitle = $documents[$target_id]->title;
 
-		// Text content
+    // Text content
     $fields = array('text', 'quote');
     foreach ($fields as $field) {
       if (isset($annotation->{$field_prefix . $field}[$annotation->language][0]['value'])) {
@@ -699,10 +728,12 @@ function lacuna_visualizations_annotation_dashboard_data() {
       }
     }
 
-		// Sharing options; we just need the overall option (Private, Everyone, etc.), not details
-		$data->audience = ucfirst($annotation->field_annotation_audience[$annotation->language][0]['value']);
+    // Sharing options; we just need the overall option (Private, Everyone, etc.), not details
+    if (isset($annotation->field_annotation_audience[$annotation->language])) {
+      $data->audience = ucfirst($annotation->field_annotation_audience[$annotation->language][0]['value']);
+    }
 
-		// Taxonomies: tags and categories
+    // Taxonomies: tags and categories
     // Note: removed tags for now; not shown, so no need to load them
     $fields = array('category');
     foreach ($fields as $field) {
@@ -727,13 +758,56 @@ function lacuna_visualizations_annotation_dashboard_data() {
     if (!empty($data->text)) {
       $data->text = str_repeat("x", strlen($data->text)); // provide length w/o exposing data
     }
-		unset($data->quote);
-		unset($data->tags);
+    unset($data->quote);
+    unset($data->tags);
 
     $data->username = $userNames[$annotation->uid];
     array_push($results, $data);
   }
+  return $results;
+}
 
+function lacuna_visualizations_annotation_dashboard_cache_get($course_id) {
+  return cache_get("lacuna_visualization_dashboard_data:$course_id");
+}
+
+function lacuna_visualizations_annotation_dashboard_cache_set($course_id, $data) {
+  if (count($data) >= variable_get('lacuna_visualizations_cache_threshold', 1000)) {
+    $cache_hours = (int) variable_get('lacuna_visualization_cache_ttl');
+    cache_set("lacuna_visualization_dashboard_data:$course_id", $data, 'cache', time() + $cache_hours * 60 * 60);
+  }
+}
+
+function lacuna_visualizations_annotation_dashboard_data() {
+  $course_id = course_get_selected_course();
+  // Check for cached data first
+  if ($cached = lacuna_visualizations_annotation_dashboard_cache_get($course_id)) {
+    drupal_json_output($cached->data);
+    drupal_exit();
+  }
+
+  $results = lacuna_visualizations_annotation_dashboard_build_data($course_id);
+
+  lacuna_visualizations_annotation_dashboard_cache_set($course_id, $results);
   drupal_json_output($results);
   drupal_exit();
+}
+
+/**
+ * Implements hook_cron().
+ */
+function lacuna_visualizations_cron() {
+  // Rebuild the Annotations Dashboard cached data for every course
+  $query = new EntityFieldQuery();
+  $query->entityCondition('entity_type', 'node')
+    ->entityCondition('bundle', 'course')
+    ->propertyCondition('status', NODE_PUBLISHED);
+  $result = $query->execute();
+  if (isset($result['node'])) {
+    foreach (array_keys($result['node']) as $nid) {
+      $data = lacuna_visualizations_annotation_dashboard_build_data($nid);
+      lacuna_visualizations_annotation_dashboard_cache_set($nid, $data);
+    }
+  }
+  watchdog('lacuna_visualizations', 'Rebuilt all dashboard data', array(), WATCHDOG_NOTICE);
 }
